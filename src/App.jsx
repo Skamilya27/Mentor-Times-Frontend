@@ -16,7 +16,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/post/:id' element={<PostDetail />} />
-        <Route path='/create-post' element={<CreatePost />} />
+
+        {/* TODO: implement editor */}
+        {/* <Route path='/create-post' element={<CreatePost />} /> */}
         <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/about-us' element={<AboutUs />} />
       </Routes>
