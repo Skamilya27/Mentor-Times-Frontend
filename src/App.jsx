@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import './App.css'
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import CreatePost from './pages/CreatePost';
+// import CreatePost from './pages/CreatePost';
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import PostDetail from './pages/PostDetail';
@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/post/:id' element={<PostDetail />} />
+        <Route path='/:id' element={<PostDetail />} />
 
         {/* TODO: implement editor */}
         {/* <Route path='/create-post' element={<CreatePost />} /> */}

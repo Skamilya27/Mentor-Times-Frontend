@@ -60,7 +60,7 @@ const Posts = () => {
                   #{post.category}
                 </p>
                 <p className="mt-4 flex-1 text-base font-semibold text-gray-900 cursor-pointer">
-                  <Link to="/post/12">{post.title}</Link>
+                  <Link to={`/${post.id}`}>{post.title}</Link>
                 </p>
                 <p className="mt-4 w-full text-sm leading-normal text-gray-600">
                   {post.description.split(" ").slice(0, 20).join(" ")}
