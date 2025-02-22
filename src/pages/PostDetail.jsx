@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import API_BASE_URL from "../../src/config";
+import API_BASE_URL from "../conf/config";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
