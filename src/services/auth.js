@@ -1,5 +1,5 @@
 import axios from "axios";
-import baseUrl from "../conf";
+import baseUrl from "../conf/config";
 
 export class AuthService {
   async login({email, password}) {
