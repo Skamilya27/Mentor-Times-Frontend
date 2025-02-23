@@ -111,7 +111,8 @@ nav #title {
   list-style: none;
 }
 
-#nav-menu li a {
+#nav-menu li a,
+#nav-menu li button {
   display: block;
   text-decoration: none;
   font-size: 1rem;
@@ -124,12 +125,14 @@ nav #title {
   transition: var(--transition);
 }
 
-#nav-menu li a.active {
+#nav-menu li a.active,
+#nav-menu li button.active {
   background-color: var(--color-highlight-bg);
   color: var(--color-text-primary);
 }
 
-#nav-menu li a:not(.active):hover {
+#nav-menu li a:not(.active):hover,
+#nav-menu li button:not(.active):hover {
   background-color: var(--color-link-hover);
 }
 
