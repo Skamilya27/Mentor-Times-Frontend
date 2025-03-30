@@ -27,22 +27,6 @@ function App() {
       <Footer />
     </div>
   ) : (null);
-
-  // return (
-  //   <div id='main'>
-  //     <Navbar />
-  //     <Routes>
-  //       <Route path='/' element={<Home />} />
-  //       <Route path='/:id' element={<PostDetail />} />
-
-  //       {/* TODO: implement editor */}
-  //       {/* <Route path='/create-post' element={<CreatePost />} /> */}
-  //       <Route path='/contact-us' element={<ContactUs />} />
-  //       <Route path='/about-us' element={<AboutUs />} />
-  //     </Routes>
-  //     <Footer />
-  //   </div>
-  // )
 }
 
 export default App
