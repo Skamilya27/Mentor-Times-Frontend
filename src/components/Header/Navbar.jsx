@@ -1,13 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Container, LogoutBtn } from "../index";
+import { LogoutBtn } from "../index";
 import { useSelector } from "react-redux";
+
+//TODO: Use container for rendering 
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(true);
 
-  const authStatus = useSelector((state) => state.auth.isAuthenticated);
+  const adminAuthStatus = useSelector((state) => state.adminAuth.isAuthenticated);
+  const authorAuthStatus = useSelector((state) => state.authorAuth.isAuthenticated);
+  const isAuthenticated = adminAuthStatus || authorAuthStatus;
 
   const navItems = [
     {
@@ -28,7 +32,7 @@ const Navbar = () => {
     {
       name: "Create Blog",
       slug: "/create-post",
-      active: authStatus,
+      active: isAuthenticated,
     },
   ];
 
@@ -61,11 +65,11 @@ const Navbar = () => {
           .map((item) => (
             <li key={item.name} className="mx-2">
               <NavLink to={item.slug} className="nav-link">
-                {item.name}
+                {item.name} 
               </NavLink>
             </li>
           ))}
-        {authStatus && (
+        {isAuthenticated && (
           <li className="mx-2">
             <LogoutBtn />
           </li>
