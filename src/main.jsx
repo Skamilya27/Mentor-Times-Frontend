@@ -11,6 +11,7 @@ import AboutUs from './pages/AboutUs.jsx';
 import PostDetail from './pages/PostDetail.jsx';
 import CreatePost from './pages/CreatePost.jsx';
 import AuthLayout from './components/AuthLayout.jsx'; 
+import './index.css';
 
 const router = createBrowserRouter([
   {
